@@ -2,6 +2,39 @@
 
 A comprehensive document processing pipeline built with Docling that converts PDFs to markdown, chunks documents with LangChain, generates embeddings, stores them in ChromaDB, and provides an AI-powered chat interface for document Q&A.
 
+## Table of contents
+
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+      - For Ollama setup, see [Ollama Setup Guide](ollama.md)
+  - [Executing the environment](#executing-the-environment)
+  - [Environment Setup](#environment-setup)
+- [Usage](#usage)
+  - [1. Convert PDFs to Markdown](#1-convert-pdfs-to-markdown)
+  - [2. Chunk Documents](#2-chunk-documents)
+  - [3. Generate and Store Embeddings](#3-generate-and-store-embeddings)
+  - [4. Chat with Your Documents](#4-chat-with-your-documents)
+- [Configuration Options](#configuration-options)
+  - [Embedding Providers](#embedding-providers)
+    - [OpenAI (Default)](#openai-default)
+    - [Ollama (Local)](#ollama-local)
+  - [Chunking Strategies](#chunking-strategies)
+  - [ChromaDB Configuration](#chromadb-configuration)
+- [Project Structure](#project-structure)
+- [Development](#development)
+  - [Testing](#testing)
+  - [Code Quality](#code-quality)
+- [Contributing](#contributing)
+- [License](#license)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Support](#support)
+- [Dependencies](#dependencies)
+- [Version](#version)
+- [Requirements](#requirements)
+
 ---
 
 ## Features

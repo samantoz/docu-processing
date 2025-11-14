@@ -87,6 +87,11 @@ python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
 
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
+
 # Note: docling and torch dependencies removed from main dependencies due to platform compatibility issues
 # For macOS x86_64, install separately:
 # uv pip install docling --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple
