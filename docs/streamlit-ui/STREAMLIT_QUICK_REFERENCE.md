@@ -392,7 +392,3 @@ pip install -r streamlit_ui/requirements.txt
 - **Streamlit Community**: https://discuss.streamlit.io/
 - **Framework Docs**: `streamlit_ui/README.md`
 - **Example Code**: `streamlit_ui/example_app.py`
-
----
-
-**Happy Building! 🎉**

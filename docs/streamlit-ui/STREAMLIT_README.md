@@ -351,11 +351,3 @@ streamlit run streamlit_ui/example_app.py
 ```
 
 Happy building! 🚀
-
----
-
-**Questions?** Check the documentation files listed above.
-
-**Want to build now?** Copy `streamlit_ui/app_template.py` and start coding!
-
-**Need reference?** See `STREAMLIT_QUICK_REFERENCE.md` for code snippets!
