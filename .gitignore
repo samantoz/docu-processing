@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+
+# Distribution / packaging
+.Python
+env/
+.env
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+logs/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+
+# personal data
+data/
+
+*.pdf
+*.eps
+*.png
+*~
+
+# OS X Files
+*.DS_Store
+
+# Jupyter Files
+.ipynb_checkpoints/

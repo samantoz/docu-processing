@@ -3,13 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "docling-rag"
+name = "docu-processing"
 version = "0.1.0"
 description = "Document processing and RAG system using Docling, LangChain, and ChromaDB"
 readme = "readme.md"
 requires-python = ">=3.11,<3.12"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Arindam Samanta", email = "samantoz@gmail.com"}
 ]
 license = {text = "MIT"}
 keywords = ["document-processing", "rag", "embeddings", "pdf", "langchain", "chromadb"]
@@ -38,6 +38,11 @@ dependencies = [
     "filetype>=1.2.0",
     "pypdf>=3.0.0",
     "pymupdf>=1.23.0",
+    "docling>=2.61.2",
+    "ollama>=0.6.0",
+    "ollama-ocr>=0.1.6",
+    "rapidocr>=3.4.2",
+    "easyocr>=1.7.2",
 ]
 
 [project.optional-dependencies]
@@ -50,13 +55,13 @@ dev = [
     "mypy>=1.0.0",
 ]
 all = [
-    "docling-rag[dev]",
+    "docu-processing[dev]",
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/docling-rag"
-Repository = "https://github.com/yourusername/docling-rag"
-Issues = "https://github.com/yourusername/docling-rag/issues"
+Homepage = "https://github.com/samantoz/docu-processing"
+Repository = "https://github.com/samantoz/docu-processing"
+Issues = "https://github.com/samantoz/docu-processing/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

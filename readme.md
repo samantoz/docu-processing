@@ -35,6 +35,18 @@ The system follows a modular pipeline architecture:
 - OpenAI API key (for OpenAI embeddings/chat), Azure OpenAI credentials, or Ollama (for local models)
 - For Ollama setup, see [Ollama Setup Guide](ollama.md)
 
+### Executing the environment
+```bash
+# Activate virtual environment
+source .venv/bin/activate
+ 
+# List all installed packages
+uv pip list
+
+# Check for a specific package (requests)
+uv pip show requests
+
+```
 ### Environment Setup
 
 ```bash
