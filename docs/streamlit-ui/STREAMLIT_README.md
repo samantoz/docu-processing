@@ -6,40 +6,19 @@ Welcome! A **modular, reusable Streamlit web UI framework** has been added to th
 
 ### 🚀 Getting Started (Start Here!)
 
-1. **STREAMLIT_SETUP.md** - 5-minute quick setup guide
-   - Installation instructions
-   - How to run the example app
-   - Basic usage examples
-
-2. **STREAMLIT_QUICK_REFERENCE.md** - Handy reference guide
+**STREAMLIT_QUICK_REFERENCE.md** - Handy reference guide
    - Common code patterns
    - Quick API reference
    - Troubleshooting tips
 
 ### 📚 In-Depth Documentation
 
-3. **streamlit_ui/README.md** - Comprehensive framework documentation
+**streamlit_ui/README.md** - Comprehensive framework documentation
    - Full architecture overview
    - Complete usage guide
    - API reference
    - Advanced usage examples
    - Contributing guidelines
-
-4. **streamlit_ui/EXAMPLE_README.md** - Example application guide
-   - Page descriptions
-   - Integration points
-   - How to extend the example
-
-5. **streamlit_ui/INDEX.md** - Framework overview
-   - Quick navigation
-   - Feature list
-   - Architecture overview
-   - Customization guide
-
-6. **STREAMLIT_FRAMEWORK_SUMMARY.md** - Integration summary
-   - What was created
-   - File structure
-   - How to use it
 
 ## 🎯 Quick Navigation
 
@@ -50,7 +29,6 @@ Welcome! A **modular, reusable Streamlit web UI framework** has been added to th
 pip install streamlit>=1.28.0 python-dotenv
 streamlit run streamlit_ui/example_app.py
 ```
-→ See `STREAMLIT_SETUP.md`
 
 **Create my first app** (15 minutes)
 ```bash
@@ -84,14 +62,12 @@ docu-processing/
 │   ├── utils/                       # Utilities (logging, state)
 │   ├── pages/                       # Directory for your app pages
 │   ├── README.md                    # Full documentation
-│   ├── EXAMPLE_README.md            # Example app documentation
-│   ├── INDEX.md                     # Framework overview
 │   ├── example_app.py               # Complete example (5 pages)
 │   ├── app_template.py              # Template for new apps
 │   └── requirements.txt
-├── STREAMLIT_SETUP.md               # Quick setup (this directory)
-├── STREAMLIT_QUICK_REFERENCE.md     # Quick reference
-└── STREAMLIT_FRAMEWORK_SUMMARY.md   # Summary
+├── docs/streamlit_ui/
+    ├── STREAMLIT_QUICK_REFERENCE.md     # Quick reference
+    └── STREAMLIT_README.md              # Summary
 ```
 
 ## ✨ Framework Highlights
@@ -294,10 +270,8 @@ See `STREAMLIT_QUICK_REFERENCE.md` for more troubleshooting.
 ## 📞 Getting Help
 
 1. **Check documentation**
-   - STREAMLIT_SETUP.md - Setup issues
    - STREAMLIT_QUICK_REFERENCE.md - API and patterns
    - streamlit_ui/README.md - Deep understanding
-   - streamlit_ui/EXAMPLE_README.md - Example-specific help
 
 2. **Explore examples**
    - streamlit_ui/example_app.py - Working example

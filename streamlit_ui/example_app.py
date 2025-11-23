@@ -1,5 +1,15 @@
 """Example Streamlit application using the UI framework - Document Chat Interface"""
 
+# Ensure project root is on `sys.path` so absolute imports like
+# `from streamlit_ui.core.app import ...` work when this file is executed
+# directly by `streamlit run` (which can change the import context).
+import os
+import sys
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 import streamlit as st
 from streamlit_ui.core.app import StreamlitApp
 from streamlit_ui.core.page import Page

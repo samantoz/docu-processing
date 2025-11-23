@@ -142,6 +142,12 @@ pip install -r requirements.txt
 ```bash
 # From the docu-processing directory
 streamlit run streamlit_ui/example_app.py
+
+# Check if Port already used: on remote, ensure port not occupied: ss -tlnp | grep :8501
+
+# Local SSH tunnel: map remote:8501 to local:8501
+ssh -L 8501:127.0.0.1:8501 sam@dell-opt-srvr
+# then open http://localhost:8501
 ```
 
 The application will open in your browser at `http://localhost:8501`
