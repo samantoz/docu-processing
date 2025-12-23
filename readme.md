@@ -34,7 +34,7 @@ A comprehensive document processing pipeline built with Docling that converts PD
 - [Dependencies](#dependencies)
 - [Version](#version)
 - [Requirements](#requirements)
-
+- [More Research Topics](#Advanced-Topics)
 ---
 
 ## Features
@@ -322,3 +322,15 @@ Current version: **0.1.0**
 
 - Python: >= 3.9, < 3.13
 - See `pyproject.toml` for complete dependency list
+
+## Advanced-Topics
+
+- How AI moves from stateless models → autonomous agents
+
+- The real meaning of context engineering, memory, and sessions
+
+- Why MCP is becoming the USB-C of AI interoperability
+
+- How to avoid demo-ware and ship production-grade agents
+
+- The new discipline of Agent Quality & Evaluation Engineering
