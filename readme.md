@@ -66,6 +66,7 @@ The system follows a modular pipeline architecture:
 
 - Python 3.9+ (< 3.13)
 - OpenAI API key (for OpenAI embeddings/chat), Azure OpenAI credentials, or Ollama (for local models)
+- Google Drive API credentials (for downloading files from Google Drive)
 - For Ollama setup, see [Ollama Setup Guide](ollama.md)
 
 ### Executing the environment
@@ -125,9 +126,38 @@ CHROMA_DB_PATH=./chroma_db
 CHROMA_COLLECTION_NAME=documents
 ```
 
+### Google Drive Setup
+
+To download files from Google Drive, you need to set up Google Drive API credentials:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project or select an existing one.
+3. Enable the Google Drive API.
+4. Create OAuth 2.0 credentials (download the `credentials.json` file).
+5. Place `credentials.json` in the project root directory.
+
+The script will handle authentication and create a `token.pickle` file for future use.
+
 ---
 
 ## Usage
+
+### 0. Download Files from Google Drive
+
+Download files from Google Drive into subfolders under `data/docs/`.
+
+```bash
+# Download a file by ID into a specific subfolder
+uv run scripts/download_from_drive.py <file_id> <subfolder_name>
+
+# Example
+uv run scripts/download_from_drive.py 1abc123def456 subfolder_name
+
+# With custom base path and credentials
+uv run scripts/download_from_drive.py <file_id> <subfolder_name> --base-path data/docs --credentials credentials.json --token token.pickle
+```
+
+**Note:** The first run will open a browser for Google authentication. Subsequent runs will use the saved token.
 
 ### 1. Convert PDFs to Markdown
 

@@ -45,6 +45,9 @@ dependencies = [
     "easyocr>=1.7.2",
     "matplotlib>=3.10.7",
     "mglearn>=0.2.0",
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth",
 ]
 
 [project.optional-dependencies]
