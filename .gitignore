@@ -29,6 +29,8 @@ coverage.xml
 
 # personal data
 data/
+chroma_db/
+chunks/
 
 *.pdf
 *.eps

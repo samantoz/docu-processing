@@ -2,7 +2,6 @@ import os
 import shutil
 import logging
 import re
-import re
 import time
 from config import (
     LOG_DIRECTORY,
