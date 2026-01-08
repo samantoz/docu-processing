@@ -25,7 +25,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "langchain>=0.3.26",
+    "langchain==1.0.0",
     "langchain-openai>=0.3.28",
     "langchain-community>=0.0.20",
     "openai>=1.97.0",
@@ -48,6 +48,7 @@ dependencies = [
     "google-api-python-client",
     "google-auth-oauthlib",
     "google-auth",
+    "langchain-ollama>=1.0.1",
 ]
 
 [project.optional-dependencies]
