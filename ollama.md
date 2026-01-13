@@ -1,3 +1,10 @@
+# Convert a HF model to GGUF version
+1. Find or create a GGUF version of the hugging face model
+2. Write a Modelfile to define how Ollama should load it
+3. Create the model in Ollama
+4. Run and interact with it locally
+5. Convert your own model if no GGUF exists
+
 # Ollama Setup Guide
 
 This guide covers setting up Ollama for the Docling RAG system, including the specific models used in this project.
@@ -35,14 +42,24 @@ Download from [ollama.ai](https://ollama.ai/download)
 # Start Ollama service
 ollama serve
 
+# Show version
+ollama -v
+
 # Install embedding model
 ollama pull jina/jina-embeddings-v2-base-en
 
 # Install chat model
 ollama pull qwen3:0.6b
 
+
 # Verify installation
 ollama list
+
+ollama pull [model] -- Download a model
+ollama rm [model] -- Remove a model
+ollama run [model] -- Run a model (/bye to exit)
+ollama show [model] -- show model info
+ollama ps -- List running models
 ```
 
 ## Configuration
