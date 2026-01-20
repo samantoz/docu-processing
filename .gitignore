@@ -15,6 +15,7 @@ eggs/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode/
 
 # Installer logs
 logs/
@@ -29,13 +30,13 @@ coverage.xml
 
 
 # personal data
-data/
+# data/
 chroma_db/
 chunks/
 
-*.pdf
-*.eps
-*.png
+# *.pdf
+# *.eps
+# *.png
 *~
 
 # OS X Files
