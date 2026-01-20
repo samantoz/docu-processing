@@ -66,6 +66,7 @@ The system follows a modular pipeline architecture:
 
 - Python 3.9+ (< 3.13)
 - OpenAI API key (for OpenAI embeddings/chat), Azure OpenAI credentials, or Ollama (for local models)
+- Tesseract OCR (required for PDF processing): `sudo apt-get install tesseract-ocr` (Linux) or `brew install tesseract` (macOS)
 - Google Drive API credentials (for downloading files from Google Drive)
 - For Ollama setup, see [Ollama Setup Guide](ollama.md)
 

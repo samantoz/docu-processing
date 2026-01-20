@@ -43,7 +43,8 @@ dependencies = [
     "landingai-ade",
     "pymupdf",
     "pydantic_settings",
-    "chromadb"
+    "chromadb",
+    "tesseract>=0.1.3",
 ]
 
 [project.optional-dependencies]
