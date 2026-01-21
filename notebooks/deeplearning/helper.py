@@ -2,11 +2,15 @@
 from pathlib import Path
 from IPython.display import display, Image as DisplayImage, IFrame
 from PIL import Image as PILImage, ImageDraw
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 import pymupdf
 from typing import Union, Dict, List, Any
 from functools import lru_cache
 import fitz
 import io
+import os
 
 def print_document(file_path: str):
     """
@@ -25,6 +29,54 @@ def print_document(file_path: str):
             print(f"Unsupported file type: {path.suffix}")
     else:
         print(f"File not found: {file_path}")
+
+def draw_ocr_boxes(image, texts, boxes, show_text=False):
+    """
+    Draws bounding boxes on the image using OpenCV.
+    
+    Args:
+        image: numpy array (cv2 image)
+        texts: list of strings
+        boxes: list of bounding boxes (list of points)
+        show_text: boolean
+        
+    Returns:
+        annotated image (numpy array)
+    """
+    img_plot = image.copy()
+    for text, box in zip(texts, boxes):
+        pts = np.array(box, dtype=int)
+        cv2.polylines(img_plot, [pts], True, (0, 255, 0), 2)
+        x, y = pts[0]
+        if show_text:
+            cv2.putText(img_plot, text, (x, y - 5), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
+    return img_plot
+
+def visualize_ocr_result(image, texts, boxes, output_filename=None, show_in_vscode=False, show_text=False):
+    """
+    Visualizes OCR results by drawing boxes and optionally saving/showing.
+    """
+    annotated_img = draw_ocr_boxes(image, texts, boxes, show_text)
+    
+    if output_filename or show_in_vscode:
+        filename = output_filename if output_filename else "ocr_output.png"
+        # Determine directory
+        obj_dir = Path("data/output")
+        obj_dir.mkdir(parents=True, exist_ok=True)
+        
+        object_path = obj_dir / filename
+        cv2.imwrite(str(object_path), annotated_img)
+        print(f"Saved visualization to {object_path}")
+        
+        if show_in_vscode:
+            os.system(f"code {object_path}")
+    else:
+        plt.figure(figsize=(8, 10))
+        plt.imshow(cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB))
+        plt.axis("off")
+        plt.title("Aligned Bounding Boxes (Processed Image)")
+        plt.show()
 
 ## Based on the code sample provided at https://docs.landing.ai/ade/ade-python#visualize-parsed-chunks:-draw-bounding-boxes
 
