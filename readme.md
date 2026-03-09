@@ -2,6 +2,8 @@
 
 A comprehensive document processing pipeline built with Docling that converts PDFs to markdown, chunks documents with LangChain, generates embeddings, stores them in ChromaDB, and provides an AI-powered chat interface for document Q&A.
 
+Using the ollama models from local server network.
+
 ## Table of contents
 
 - [Features](#features)
