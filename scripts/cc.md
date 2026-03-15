@@ -1,4 +1,3 @@
-
 ### Open Router + Claude Code
 ## Step 1: Get Free OpenRouter Key
 1. Go to `openrouter.ai/keys`
